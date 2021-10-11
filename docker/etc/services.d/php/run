@@ -1,0 +1,3 @@
+#!/bin/execlineb -P
+
+php-fpm7 -F

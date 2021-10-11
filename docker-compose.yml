@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  phppgadmin:
+    image: phppgadmin:custom
+    container_name: phppgadmin
+    ports:
+      - "8077:80"
+    environment:
+      - TZ=Europe/Madrid
+    volumes:
+      - <host_path>/config.inc.php:/var/www/app/conf/config.inc.php
+    restart: unless-stopped
